@@ -34,10 +34,10 @@ app.get('/posts', (req, res) => {
 //////////////////////////
 //create new post
 app.post('/posts', (req, res) => {
-    console.log(req.body.newPost)
+    console.log(req.body)
     // create a new user from client's request
     // save new user to existing database
-    posts.push(req.body.newPost)
+    posts.push(req.body)
     // save updated data to users json
     // stringify the json data
     let stringedData = JSON.stringify(posts, null, 2)
