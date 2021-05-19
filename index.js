@@ -80,7 +80,7 @@ app.get('/posts/:id', (req, res) => {
 app.put('/posts/:id', (req, res) => {
     let postId = req.params.id
     let foundPost = posts.find(post => {
-        return String(posts.id === postId)
+        return String(posts.id) === postId
     })
 
     let index = posts.indexOf(foundPost)
